@@ -1,3 +1,78 @@
-<h2 id="title">Welcome to Ember.js</h2>
+<div class="ui left vertical inverted sidebar menu">
+  <div class="header item">Awesome New Blog</div>
+  {{#link-to 'blogs' class="item"}}
+    <i class="browser icon"></i>
+    Blogs
+  {{/link-to}}
+  {{#link-to 'about' class="item"}}
+    <i class="info icon"></i>
+    About Us
+  {{/link-to}}
+</div>
 
-{{outlet}}
+
+
+<div class="ui fixed sticky right attached button black launch" id="menu-button">
+  <i class="content icon"></i><span class="text">Menu</span>
+</div>
+
+
+
+<div class="ui main container">
+  <button class="ui button"{{action "confirm"}}>Display</button>
+  <div class="ui divider"></div>
+  <h1 class="ui center aligned huge header">Awesome New Blog <div class="sub header">By Awesome People</div></h1>
+  <div class="ui horizontal header divider"><i class="idea icon"></i></div>
+  {{outlet}}
+</div>
+
+<div class="ui black inverted footer segment">
+  <div class="ui center aligned container">
+    <div class ="ui stackable inverted three column grid">
+      <div class="column">
+        <h4 class="ui inverted header"><i class="github icon"></i> Github</h4>
+        <div class ="ui inverted link list">
+          <a class="item">Git</a>
+          <a class="item">Git</a>
+          <a class="item">Git</a>
+        </div>
+      </div>
+      <div class="column">
+        <h4 class="ui inverted header"><i class="google icon"></i> Google Plus</h4>
+        <div class ="ui inverted link list">
+          <a class="item">G+</a>
+          <a class="item">G+</a>
+          <a class="item">G+</a>
+        </div>
+      </div>
+      <div class="column">
+        <h4 class="ui inverted header"><i class="heart icon"></i> Other Projects</h4>
+        <div class ="ui inverted link list">
+          <a class="item">Other</a>
+          <a class="item">Other</a>
+          <a class="item">Other</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{outlet 'modal'}}
+
+<script>
+$(function(){
+  $('.left.sidebar')
+  .sidebar('attach events','.ui.launch.button')
+  .sidebar('attach events','a.item')
+  ;
+  $('#menu-button')
+  .mouseenter(function(){
+		$(this).stop().animate({width: '100px'}, 300,
+             function(){$(this).find('.text').show();});
+	}).mouseleave(function (event){
+		$(this).find('.text').hide();
+		$(this).stop().animate({width: '40px'}, 300);
+	});
+
+});
+</script>

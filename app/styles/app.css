@@ -1,0 +1,17 @@
+.main{
+  padding-top: 36px;
+}
+
+#menu-button{
+  position: fixed;
+  width:40px;
+  top:36px;
+}
+
+span.text{
+  display:none;
+}
+.ui.footer.segment {
+  margin: 5em 0em 0em;
+  padding: 5em 0em;
+}

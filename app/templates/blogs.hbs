@@ -1,0 +1,5 @@
+{{#each model as |blog|}}
+  {{blog-post title=blog.title body=blog.body post_create_date=blog.post_create_date}}
+{{else}}
+  No posts to show
+{{/each}}
