@@ -12,12 +12,11 @@
     "jquery": "^1.11.1",
     "loader.js": "ember-cli/loader.js#3.2.0",
     "qunit": "~1.17.1",
-    "next": "https://github.com/Semantic-Org/Semantic-UI/tree/next/",
-    "semantic-ui": "*",
     "marked": "~0.3.3",
-    "highlightjs": "~8.5.0"
+    "highlightjs": "~8.5.0",
+    "semantic-ui": "~2.0.0"
   },
   "devDependencies": {
-    "semantic-ui": "https://github.com/Semantic-Org/Semantic-UI/archive/next.zip"
+    "semantic-ui": "~2.0.0"
   }
 }
