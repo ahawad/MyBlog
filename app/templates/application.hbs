@@ -1,18 +1,4 @@
-<div class="ui left vertical inverted sidebar menu">
-  <div class="header item">Awesome New Blog</div>
-  {{#link-to 'blogs' class="item"}}
-    <i class="browser icon"></i>
-    Blogs
-  {{/link-to}}
-  {{#link-to 'about' class="item"}}
-    <i class="info icon"></i>
-    About Us
-  {{/link-to}}
-</div>
-
-<div class="ui fixed sticky right attached button black launch" id="menu-button">
-  <i class="content icon"></i><span class="text">Menu</span>
-</div>
+{{partial 'sidebar'}}
 
 <div class="ui main container">
   <div class="ui divider"></div>
@@ -21,36 +7,7 @@
   {{outlet}}
 </div>
 
-<div class="ui black inverted footer segment">
-  <div class="ui center aligned container">
-    <div class ="ui stackable inverted three column grid">
-      <div class="column">
-        <h4 class="ui inverted header"><i class="github icon"></i> Github</h4>
-        <div class ="ui inverted link list">
-          <a class="item">Git</a>
-          <a class="item">Git</a>
-          <a class="item">Git</a>
-        </div>
-      </div>
-      <div class="column">
-        <h4 class="ui inverted header"><i class="google icon"></i> Google Plus</h4>
-        <div class ="ui inverted link list">
-          <a class="item">G+</a>
-          <a class="item">G+</a>
-          <a class="item">G+</a>
-        </div>
-      </div>
-      <div class="column">
-        <h4 class="ui inverted header"><i class="heart icon"></i> Other Projects</h4>
-        <div class ="ui inverted link list">
-          <a class="item">Other</a>
-          <a class="item">Other</a>
-          <a class="item">Other</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+{{partial 'footer'}}
 
 {{outlet 'modal'}}
 

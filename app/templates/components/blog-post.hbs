@@ -1,7 +1,11 @@
 <div class="ui grid">
   <div class="row">
     <div class="column">
-      <h1 class="ui header blue">{{title}}</h1>
+
+      {{#link-to 'blog' post.id}}
+        <h1 class="ui header blue">{{post.title}}</h1>
+      {{/link-to}}
+
     </div>
   </div>
   <div class="row">
@@ -11,13 +15,13 @@
       <a class="ui label">Ipsum</a>
       <a class="ui label">Iplor</a>
       <i class="time icon"></i>
-      <span class="date">{{post_create_date}}</span>
+      <span class="date">{{post.post_create_date}}</span>
     </div>
   </div>
   <div class="row">
     <div class="column">
       <p>
-        {{format-markdown body}}
+        {{format-markdown post.body}}
       </p>
     </div>
   </div>
