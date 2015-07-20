@@ -1,6 +1,6 @@
 {{partial 'sidebar'}}
 
-<div class="ui main container">
+<div class="ui main container pusher">
   <div class="ui divider"></div>
   <div class="ui center aligned huge header">Awesome New Blog <div class="sub header">By Awesome People</div></div>
   <div class="ui horizontal header divider"><i class="idea icon"></i></div>
@@ -16,7 +16,10 @@ $(function(){
   $('.left.sidebar')
   .sidebar('attach events','.ui.launch.button')
   .sidebar('attach events','a.item')
+  .sidebar('setting','context','div')
+  .sidebar('setting','transition','overlay')
   ;
+
   $('#menu-button')
   .mouseenter(function(){
 		$(this).stop().animate({width: '100px'}, 300,
