@@ -26,11 +26,10 @@ module.exports = function(environment) {
   };
   ENV['simple-auth-token']={
       serverTokenEndpoint:'https://francophone-doright-6493.herokuapp.com/api/rest-auth/login/',
-      tokenPropertyName:'key'
+      tokenPropertyName:'key',
+      authorizationPrefix: 'Token ',
   };
-  ENV['ember-cli-notifications'] = {
-    includeFontAwesome: true
-  };
+
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
