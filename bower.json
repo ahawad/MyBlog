@@ -14,7 +14,8 @@
     "qunit": "~1.17.1",
     "marked": "~0.3.3",
     "highlightjs": "~8.5.0",
-    "semantic-ui": "~2.0.0"
+    "semantic-ui": "~2.0.0",
+    "ember-simple-auth": "0.8.0"
   },
   "devDependencies": {
     "semantic-ui": "~2.0.0"

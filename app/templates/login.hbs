@@ -1,0 +1,11 @@
+<form class="ui form"{{action 'authenticate' on="submit"}}>
+  <div class="field">
+    <label>Username/Email</label>
+      {{input id="username" placeholder="Enter Username/Email" type="text" value=identification}}
+  </div>
+  <div class="field">
+    <label>Password</label>
+    {{input id="password" placeholder="Enter your password" type="password" value=password}}
+  </div>
+  <button class="ui button" type="submit">Submit</button>
+</form>

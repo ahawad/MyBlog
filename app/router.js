@@ -9,6 +9,8 @@ Router.map(function() {
   this.route('blogs');
   this.route('about');
   this.route('blog',{path:'/blogs/:blog_slug'});
+  this.route('login');
+  this.route('invalidate');
 });
 
 export default Router;

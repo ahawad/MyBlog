@@ -1,9 +1,23 @@
 <div class="ui left vertical inverted sidebar menu">
   <div class="header item">Awesome New Blog</div>
+
   {{#link-to 'blogs' class="item"}}
     <i class="browser icon"></i>
     Blogs
   {{/link-to}}
+
+  {{#if session.isAuthenticated}}
+    <a {{action 'invalidateSession' on='click'}} class="item">
+      <i class="user icon"></i>
+      Logout
+    </a>
+  {{else}}
+    {{#link-to 'login' class="item"}}
+      <i class="user icon"></i>
+      Login
+    {{/link-to}}
+  {{/if}}
+
   {{#link-to 'about' class="item"}}
     <i class="info icon"></i>
     About Us

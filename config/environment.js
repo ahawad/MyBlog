@@ -19,7 +19,17 @@ module.exports = function(environment) {
       // when it is created
       API_HOST : deploy_url ,
       API_NAMESPACE: 'api'
-    }
+    },
+  };
+  ENV['simple-auth']={
+     authorizer: 'simple-auth-authorizer:token'
+  };
+  ENV['simple-auth-token']={
+      serverTokenEndpoint:'https://francophone-doright-6493.herokuapp.com/api/rest-auth/login/',
+      tokenPropertyName:'key'
+  };
+  ENV['ember-cli-notifications'] = {
+    includeFontAwesome: true
   };
 
   if (environment === 'development') {
