@@ -10,6 +10,7 @@ export default Ember.Controller.extend({
           authenticator = 'simple-auth-authenticator:token';
 
       this.get('session').authenticate(authenticator, credentials);
+
     }
   }
 });

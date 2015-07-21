@@ -6,6 +6,7 @@ import ApplicationRouteMixin from 'simple-auth/mixins/application-route-mixin';
 var ApplicationRoute = Ember.Route.extend(ApplicationRouteMixin,ResetScroll,SemanticRouteMixin, {
   actions:{
     invalidateSession: function(){
+      Ember.$('.left.sidebar').sidebar('toggle');
       this.get('session').invalidate();
     },
     sessionAuthenticationSucceeded: function(){
@@ -23,6 +24,12 @@ var ApplicationRoute = Ember.Route.extend(ApplicationRouteMixin,ResetScroll,Sema
           type:'info',
           autoClear:true,
       });
+      Ember.$.ajax({
+        url:'https://francophone-doright-6493.herokuapp.com/api/rest-auth/logout/',
+        type:'POST',
+        accepts: 'application/json',
+      });
+
     },
   }
 });

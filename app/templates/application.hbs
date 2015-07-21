@@ -18,11 +18,10 @@
 
 <script>
 $(function(){
-  $('.left.sidebar')
+  $('.ui.sidebar')
   .sidebar('attach events','.ui.launch.button')
-  .sidebar('attach events','a.item')
+  .sidebar('attach events', '.menu .item')
   .sidebar('setting','context','div')
-  .sidebar('setting','transition','overlay')
   ;
 
   $('#menu-button')
