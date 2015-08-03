@@ -1,4 +1,4 @@
-.main{
+.main.container{
   padding-top: 36px;
 }
 
@@ -11,8 +11,10 @@
 span.text{
   display:none;
 }
+
 .ui.footer.segment {
-  margin: 5em 0em 0em;
+  width: 100%;
+  margin:5em 0em 0em;
   padding: 5em 0em;
 }
 

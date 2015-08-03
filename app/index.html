@@ -14,18 +14,23 @@
 
     {{content-for 'head-footer'}}
   </head>
-  <body>
+  <body class="pushable">
 
     <div id="loading-spinner"class= "ui basic segment center aligned">
       <div class="ui large inline active text loader">Loading</div>
     </div>
 
+
     {{content-for 'body'}}
+
+
 
     <script src="assets/vendor.js"></script>
     <script src="assets/my-blog.js"></script>
     <script>
     $(function(){
+
+    
       $('.ui.sidebar')
       .sidebar('attach events','.ui.launch.button')
       .sidebar('attach events', '.menu .item')
@@ -40,8 +45,9 @@
     		$(this).find('.text').hide();
     		$(this).stop().animate({width: '40px'}, 300);
     	});
-
     });
+
+
     </script>
 
     {{content-for 'body-footer'}}

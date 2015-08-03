@@ -7,5 +7,5 @@
     <label>Password</label>
     {{input id="password" placeholder="Enter your password" type="password" value=password}}
   </div>
-  <button class="ui button" type="submit">Submit</button>
+  <button class={{if isLogging 'ui loading button' 'ui button'}} type="submit">Submit</button>
 </form>

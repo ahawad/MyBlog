@@ -17,6 +17,15 @@ var ApplicationRoute = Ember.Route.extend(ApplicationRouteMixin,ResetScroll,Sema
           autoClear:true,
       });
     },
+    sessionAuthenticationFailed: function(error){
+      for (var key in error){
+          this.notifications.addNotification({
+              message: error[key],
+              type:'error',
+              autoClear:true,
+            });
+      }
+    },
     sessionInvalidationSucceeded: function(){
       this.transitionTo('index');
       this.notifications.addNotification({

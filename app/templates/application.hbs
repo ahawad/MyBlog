@@ -1,6 +1,6 @@
 {{partial 'sidebar'}}
 
-<div class="ui main container pusher">
+<div class="ui main container">
   <div class="ui divider"></div>
   <div class="ui center aligned huge header">Awesome New Blog <div class="sub header">By Awesome People</div></div>
   <div class="ui horizontal header divider"><i class="idea icon"></i></div>
@@ -15,23 +15,3 @@
 {{partial 'footer'}}
 
 {{outlet 'modal'}}
-
-<script>
-$(function(){
-  $('.ui.sidebar')
-  .sidebar('attach events','.ui.launch.button')
-  .sidebar('attach events', '.menu .item')
-  .sidebar('setting','context','div')
-  ;
-
-  $('#menu-button')
-  .mouseenter(function(){
-		$(this).stop().animate({width: '100px'}, 300,
-             function(){$(this).find('.text').show();});
-	}).mouseleave(function (event){
-		$(this).find('.text').hide();
-		$(this).stop().animate({width: '40px'}, 300);
-	});
-
-});
-</script>
